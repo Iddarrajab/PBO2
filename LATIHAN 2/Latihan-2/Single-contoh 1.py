@@ -1,0 +1,30 @@
+# Nama   : muhammad iddar rajab
+# NIM    : 210511028
+# Kelas  : R1
+# Matkul : Pemrogaman Berorientasi Objek 2
+
+
+class Hewan:
+
+    def __init__(self, nama, umur):
+        self.nama = nama
+        self.umur = umur
+
+    def bergerak(self):
+
+        print(self.nama, "bergerak")
+
+
+class Kucing(Hewan):
+
+    def __init__(self, nama, umur, jenis_bulu):
+        super().__init__(nama, umur)
+        self.jenis_bulu = jenis_bulu
+
+    def bersuara(self):
+        print("Meow!")
+
+
+kucingA = Kucing("Kitty", 2, "Persia")
+kucingA.bergerak()  # output: Kitty bergerak
+kucingA.bersuara()  # output: Meow!
